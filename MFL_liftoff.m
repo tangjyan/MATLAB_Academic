@@ -83,4 +83,7 @@ lgd.Location = 'best';
 lgd.Box = 'off';
 lgd.NumColumns = 1;
 
+saveas(fig, 'MFL_liftoff', 'png')
+
+
 end
