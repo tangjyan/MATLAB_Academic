@@ -81,7 +81,7 @@ leg.Location = 'east';
 leg.NumColumns= 1
 leg.Box = 'on';
 
-saveas(fig, 'MFL_depth', 'emf')
+saveas(fig, 'MFL_depth', 'svg')
 print(fig, 'MFL_depth','-r175','-dpng');
 
 
