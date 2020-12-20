@@ -81,6 +81,7 @@ leg.Location = 'east';
 leg.Box = 'on';
 
 saveas(fig, 'MFL_depth', 'emf')
+print(fig, 'MFL_depth','-r300','-dpng');
 
 
 

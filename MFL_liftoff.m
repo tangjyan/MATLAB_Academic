@@ -84,6 +84,6 @@ lgd.Box = 'off';
 lgd.NumColumns = 1;
 
 saveas(fig, 'MFL_liftoff', 'emf')
-
+print(fig, 'MFL_liftoff','-r300','-dpng');
 
 end
