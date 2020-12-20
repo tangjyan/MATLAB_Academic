@@ -16,7 +16,7 @@ fig = figure;
 ax = axes(fig);
 
 % ÉèÖÃ×ø±ê±êÇ©
-x_label="Depth (mm)";
+x_label="Thickness (mm)";
 y_label="$H_x$ (A/m)";
 
 d=linspace(0,y);
