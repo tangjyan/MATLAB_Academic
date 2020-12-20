@@ -50,7 +50,7 @@ ax.TickLength(1) = 0.02;
 
 yyaxis left;
 h1=plot(h,y1);
-set(h1,'LineStyle','-','linewidth',2);
+set(h1,'LineStyle','-','linewidth',1.5);
 ax.YLabel.String=y_label1;
 ax.YLabel.Units = 'normalized';
 % ax.YLabel.Position = [-0.1, 0.5];
@@ -64,7 +64,7 @@ ax.TickDir = 'in';
 
 yyaxis right;
 h2=plot(h(1:end-1),diff(y1));
-set(h2,'LineStyle','--','linewidth',2);
+set(h2,'LineStyle','--','linewidth',1.5);
 ax.YLabel.String=y_label2;
 % ax.YLabel.Position = [0, 0.5];
 ax.YLabel.Interpreter = 'latex';
@@ -80,7 +80,7 @@ leg.Interpreter = 'latex';
 leg.Location = 'east';
 leg.NumColumns= 1
 leg.Box = 'on';
-
+leg.LineWidth= 0.5;
 saveas(fig, 'MFL_depth', 'svg')
 print(fig, 'MFL_depth','-r175','-dpng');
 
