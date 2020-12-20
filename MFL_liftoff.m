@@ -49,7 +49,7 @@ ax.FontName =fig_font;
 ax.FontSize = 9;
 ax.TickLabelInterpreter = la_tex;
 ax.LooseInset=[0.3,0.3,0.3,0.3];  % 控制白边，0为无白边
-
+box(ax,'off');  % 关闭上轴和右轴
 
 ax.XLabel.String = x_label;
 ax.XLabel.Units = 'normalized';
@@ -60,7 +60,7 @@ ax.XLabel.Interpreter = la_tex;
 % tick
 ax.XTick=(0:0.25:1);
 ax.XMinorTick = 'off';   % 次坐标开关
-ax.TickDir = 'in';       % 坐标标签方向
+ax.TickDir = 'out';       % 坐标标签方向
 ax.TickLength(1) = 0.02; % 坐标标签长度
 
 
@@ -76,14 +76,14 @@ ax.YLabel.Interpreter = la_tex;
 ax.YTick=(0:0.1:0.5);
 ax.YMinorTick = 'off';
 ax.TickLength = [0.02 0.035];
-ax.TickDir = 'in';
+
 
 lgd.Interpreter = la_tex;
 lgd.Location = 'best';
 lgd.Box = 'off';
 lgd.NumColumns = 1;
 
-saveas(fig, 'MFL_liftoff', 'png')
+saveas(fig, 'MFL_liftoff', 'emf')
 
 
 end

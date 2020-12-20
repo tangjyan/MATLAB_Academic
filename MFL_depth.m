@@ -63,7 +63,7 @@ ax.TickDir = 'in';
 
 yyaxis right;
 h2=plot(h(1:end-1),diff(y1));
-set(h2,'LineStyle',':','linewidth',2);
+set(h2,'LineStyle','--','linewidth',2);
 ax.YLabel.String=y_label2;
 % ax.YLabel.Position = [0, 0.5];
 % ax.YLabel.Interpreter = 'latex';
@@ -79,6 +79,7 @@ leg.Interpreter = 'tex';
 leg.Location = 'east';
 leg.Box = 'on';
 
+saveas(fig, 'MFL_depth', 'emf')
 
 
 
