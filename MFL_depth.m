@@ -30,7 +30,7 @@ fig.Color = [1.0, 1.0, 1.0]; % background color
 
 ax.Units = 'centimeters';
 % ax.Position = [1.4, 1, 4, 4];
-ax.LineWidth = 1;
+ax.LineWidth = 0.75; % ×ø±êÖáÏß¿í
 ax.FontName ='Times New Roman'; % 'Arial';
 ax.FontSize = 9;
 ax.TickLabelInterpreter = 'latex';

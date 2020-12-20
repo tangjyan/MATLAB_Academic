@@ -44,7 +44,7 @@ fig.Color = [1.0, 1.0, 1.0]; % background color
 
 ax.Units = 'centimeters';
 % ax.Position = [1.4, 1, 4, 4];
-ax.LineWidth = 1;
+ax.LineWidth = 0.5;
 ax.FontName =fig_font; 
 ax.FontSize = 9;
 ax.TickLabelInterpreter = la_tex;
@@ -64,8 +64,8 @@ ax.TickDir = 'out';       % 坐标标签方向
 ax.TickLength(1) = 0.02; % 坐标标签长度
 
 
-set(h1,'LineStyle','-','linewidth',2);
-set(h2,'LineStyle','-.','linewidth',2);
+set(h1,'LineStyle','-','linewidth',1.5);
+set(h2,'LineStyle','-.','linewidth',1.5);
 
 ax.YLabel.String=y_label;
 ax.YLabel.Units = 'normalized';
