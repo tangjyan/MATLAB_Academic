@@ -43,7 +43,7 @@ ax.XLabel.Interpreter = 'latex';
 % ax.XLim(1) = 0;
 ax.XTick=(0:25:100);
 % tick
-ax.XMinorTick = 'off';
+ax.XMinorTick = 'on';
 ax.TickDir = 'in';
 
 ax.TickLength(1) = 0.02;
@@ -56,9 +56,9 @@ ax.YLabel.Units = 'normalized';
 % ax.YLabel.Position = [-0.1, 0.5];
 ax.YLabel.Interpreter = 'latex';
 % ax.YLim(1) = 0;
-axis([0 100 0 1.5]);
-ax.YTick=(0:0.3:1.5);
-ax.YMinorTick = 'off';
+axis([0 100 0 1.6]);
+ax.YTick=(0:0.4:1.6);
+ax.YMinorTick = 'on';
 ax.TickLength = [0.02 0.035];
 ax.TickDir = 'in';
 
@@ -69,15 +69,16 @@ ax.YLabel.String=y_label2;
 % ax.YLabel.Position = [0, 0.5];
 ax.YLabel.Interpreter = 'latex';
 % ax.YLim(1) = 0;
-axis([0 100 0 0.1]);
-ax.YTick=(0:0.02:0.1);
-ax.YMinorTick = 'off';
+axis([0 100 0 0.12]);
+ax.YTick=(0:0.03:0.12);
+ax.YMinorTick = 'on';
 ax.TickDir = 'in';
 
 % ´´½¨ legend(ax)
 leg=legend(ax,"$H_x$","$H^{'}_{x}$");
 leg.Interpreter = 'latex';
 leg.Location = 'east';
+leg.NumColumns= 1
 leg.Box = 'on';
 
 saveas(fig, 'MFL_depth', 'emf')

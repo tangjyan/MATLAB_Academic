@@ -59,7 +59,7 @@ ax.XLabel.Interpreter = la_tex;
 
 % tick
 ax.XTick=(0:0.25:1);
-ax.XMinorTick = 'off';   % 次坐标开关
+ax.XMinorTick = 'on';   % 次坐标开关
 ax.TickDir = 'out';       % 坐标标签方向
 ax.TickLength(1) = 0.02; % 坐标标签长度
 
@@ -74,7 +74,7 @@ ax.YLabel.Interpreter = la_tex;
 % ax.YLim(1) = 0;
 % axis([0 100 0 1.5]);
 ax.YTick=(0:0.1:0.5);
-ax.YMinorTick = 'off';
+ax.YMinorTick = 'on';
 ax.TickLength = [0.02 0.035];
 
 
