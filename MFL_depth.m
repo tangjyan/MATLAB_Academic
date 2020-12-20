@@ -17,8 +17,8 @@ ax = axes(fig);
 
 % 设置坐标标签
 x_label="Depth (mm)";
-y_label1="\it{H_x} \rm(A/m)";
-y_label2="\itH_x^' \rm(A/m\cdotmm)";
+y_label1="$H_x$ (A/m)";
+y_label2="$H^{'}_{x}$ (A/m$\cdot$mm)";
 
 % 构建函数
 h=linspace(0,100);
@@ -31,14 +31,15 @@ fig.Color = [1.0, 1.0, 1.0]; % background color
 ax.Units = 'centimeters';
 % ax.Position = [1.4, 1, 4, 4];
 ax.LineWidth = 1;
-ax.FontName ='Arial'; % 'Times New Roman';
+ax.FontName ='Times New Roman'; % 'Arial';
 ax.FontSize = 9;
-% ax.TickLabelInterpreter = 'latex';
+ax.TickLabelInterpreter = 'latex';
 
 ax.XLabel.String = x_label;
+
 ax.XLabel.Units = 'normalized';
 %ax.XLabel.Position = [0.5, -0.125];
-% ax.XLabel.Interpreter = 'latex';
+ax.XLabel.Interpreter = 'latex';
 % ax.XLim(1) = 0;
 ax.XTick=(0:25:100);
 % tick
@@ -53,7 +54,7 @@ set(h1,'LineStyle','-','linewidth',2);
 ax.YLabel.String=y_label1;
 ax.YLabel.Units = 'normalized';
 % ax.YLabel.Position = [-0.1, 0.5];
-% ax.YLabel.Interpreter = 'latex';
+ax.YLabel.Interpreter = 'latex';
 % ax.YLim(1) = 0;
 axis([0 100 0 1.5]);
 ax.YTick=(0:0.3:1.5);
@@ -66,7 +67,7 @@ h2=plot(h(1:end-1),diff(y1));
 set(h2,'LineStyle','--','linewidth',2);
 ax.YLabel.String=y_label2;
 % ax.YLabel.Position = [0, 0.5];
-% ax.YLabel.Interpreter = 'latex';
+ax.YLabel.Interpreter = 'latex';
 % ax.YLim(1) = 0;
 axis([0 100 0 0.1]);
 ax.YTick=(0:0.02:0.1);
@@ -74,8 +75,8 @@ ax.YMinorTick = 'off';
 ax.TickDir = 'in';
 
 % 创建 legend(ax)
-leg=legend(ax,"H_x","H_x^'");
-leg.Interpreter = 'tex';
+leg=legend(ax,"$H_x$","$H^{'}_{x}$");
+leg.Interpreter = 'latex';
 leg.Location = 'east';
 leg.Box = 'on';
 
