@@ -9,12 +9,6 @@ b=0.1; %缺陷半宽
 h=1;   %缺陷深度
 % d=  ;  %填充层厚度
 
-
-
-% 设置图幅
-fig = figure;
-ax = axes(fig);
-
 % 设置坐标标签
 x_label="Thickness (mm)";
 y_label="$H_x$ (A/m)";
@@ -24,15 +18,24 @@ y1=Hx(x,y-d,b,h+d)-Hx(x,y-d,b,d);
 y2=Hx(x,y,b,h)+0*d;
 
 % 绘图
-h1=plot(d,y1);hold on;
-h2=plot(d,y2);
-lgd = legend(ax,"Iron with slot","Air"); %\fontname{宋体}
+
+global lgdt;
+lgdt = ["Iron with slot","Air"]; %\fontname{宋体}
 
 % 图像设置
-plot_fig(fig, ax, lgd, x_label, y_label, h1, h2)
+plot_fig(x_label, y_label, d, y1, d, y2)
 
-function plot_fig(fig, ax, lgd, x_label, y_label, h1, h2)
+function plot_fig(x_label, y_label, x1, y1, x2, y2)
+global lgdt;
 
+% 设置图幅
+fig = figure;
+ax = axes(fig);
+
+h1=plot(x1,y1);hold on;
+h2=plot(x2,y2);
+
+% 设置文字渲染引擎，全英文使用latex，有中文使用tex
 la_tex='latex';
 
 % 设置字体
@@ -44,7 +47,7 @@ fig.Color = [1.0, 1.0, 1.0]; % background color
 
 ax.Units = 'centimeters';
 % ax.Position = [1.4, 1, 4, 4];
-ax.LineWidth = 0.5;
+ax.LineWidth = 0.75;
 ax.FontName =fig_font; 
 ax.FontSize = 9;
 ax.TickLabelInterpreter = la_tex;
@@ -77,7 +80,9 @@ ax.YTick=(0:0.1:0.5);
 ax.YMinorTick = 'on';
 ax.TickLength = [0.02 0.035];
 
-
+% lgd('on')
+legend(lgdt);
+lgd=legend(ax);
 lgd.Interpreter = la_tex;
 lgd.Location = 'best';
 lgd.Box = 'off';
