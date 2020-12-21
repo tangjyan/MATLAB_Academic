@@ -16,7 +16,7 @@ ax = axes(fig);
 
 
 % 设置坐标标签
-x_label="Depth (mm)";
+x_label="\fontname{宋体}厚度 \fontname{Times New Roman}(mm)";
 y_label1="$H_x$ (A/m)";
 y_label2="$H^{'}_{x}$ (A/m$\cdot$mm)";
 
@@ -36,10 +36,9 @@ ax.FontSize = 9;
 ax.TickLabelInterpreter = 'latex';
 
 ax.XLabel.String = x_label;
-
 ax.XLabel.Units = 'normalized';
 %ax.XLabel.Position = [0.5, -0.125];
-ax.XLabel.Interpreter = 'latex';
+ax.XLabel.Interpreter = 'tex';
 % ax.XLim(1) = 0;
 ax.XTick=(0:25:100);
 % tick
@@ -78,7 +77,7 @@ ax.TickDir = 'in';
 leg=legend(ax,"$H_x$","$H^{'}_{x}$");
 leg.Interpreter = 'latex';
 leg.Location = 'east';
-leg.NumColumns= 1
+leg.NumColumns= 1;
 leg.Box = 'on';
 leg.LineWidth= 0.5;
 saveas(fig, 'MFL_depth', 'svg')
