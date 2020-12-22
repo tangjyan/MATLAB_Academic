@@ -48,14 +48,15 @@ ax.TickDir = 'in';
 ax.TickLength(1) = 0.02;
 
 yyaxis left;
-h1=plot(h,y1);
-set(h1,'LineStyle','-','linewidth',1.5);
+h1=plot(h,y1,'-k');
+set(h1, 'linewidth', 1.5); % , 'LineStyle', '-','Color',[0.3 0.8 0.9]
 ax.YLabel.String=y_label1;
 ax.YLabel.Units = 'normalized';
 % ax.YLabel.Position = [-0.1, 0.5];
 ax.YLabel.Interpreter = 'latex';
 % ax.YLim(1) = 0;
 axis([0 100 0 1.6]);
+ax.YColor= [0 0 0];
 ax.YTick=(0:0.4:1.6);
 ax.YMinorTick = 'on';
 ax.TickLength = [0.02 0.035];
@@ -63,7 +64,7 @@ ax.TickDir = 'in';
 
 yyaxis right;
 h2=plot(h(1:end-1),diff(y1));
-set(h2,'LineStyle','--','linewidth',1.5);
+set(h2 ,'linewidth',1.5);
 ax.YLabel.String=y_label2;
 % ax.YLabel.Position = [0, 0.5];
 ax.YLabel.Interpreter = 'latex';

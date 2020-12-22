@@ -67,7 +67,7 @@ ax.TickDir = 'out';       % 坐标标签方向
 ax.TickLength(1) = 0.02; % 坐标标签长度
 
 
-set(h1,'LineStyle','-','linewidth',1.5);
+set(h1, 'color', 'k','LineStyle','-','linewidth',1.5);
 set(h2,'LineStyle','-.','linewidth',1.5);
 
 ax.YLabel.String=y_label;
