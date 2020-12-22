@@ -20,8 +20,6 @@ x_label="\fontname{宋体}厚度 \fontname{Times New Roman}(mm)";
 y_label1="$H_x$ (A/m)";
 y_label2="$H^{'}_{x}$ (A/m$\cdot$mm)";
 
-llw = 1.5; % 设置曲线线宽
-
 % 构建函数
 h=linspace(0,100);
 y1=Hx(x,y,b,h);
@@ -50,10 +48,8 @@ ax.TickDir = 'in';
 ax.TickLength(1) = 0.02;
 
 yyaxis left;
-l1=plot(h,y1,'k');
-
-% 采用函数式绘图，而非set式，要注意函数名大小写不能随意
-l1.LineWidth=llw; % 设置曲线宽度
+h1=plot(h,y1,'k');
+h1.LineWidth=1.5; % 采用
 % h1.LineStyle='--'
 % h1.Color=[0.3 0.8 0.9];
 ax.YLabel.String=y_label1;
@@ -69,10 +65,8 @@ ax.TickLength = [0.02 0.035];
 ax.TickDir = 'in';
 
 yyaxis right;
-l2=plot(h(1:end-1),diff(y1));
-l2.LineWidth=llw; 
-l2.LineStyle='--';
-
+h2=plot(h(1:end-1),diff(y1));
+set(h2 ,'linewidth',1.5);
 ax.YLabel.String=y_label2;
 % ax.YLabel.Position = [0, 0.5];
 ax.YLabel.Interpreter = 'latex';
