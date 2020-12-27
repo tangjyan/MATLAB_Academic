@@ -11,6 +11,7 @@
 ## 字体
 图片中的字体，中文为宋体，英文为Times New Roman。包含公式的可以使用LaTeX渲染公式，否则使用Tex渲染。
 
-![示例绘图](https://github.com/S-Kee/MATLAB_Academic/blob/master/MFL_liftoff.svg =400x300)    
-![示例绘图2](https://github.com/S-Kee/MATLAB_Academic/blob/master/MFL_depth.svg =400x300)
+
+<img src="https://github.com/S-Kee/MATLAB_Academic/blob/master/MFL_liftoff.svg" width="80%">    <img src="https://github.com/S-Kee/MATLAB_Academic/blob/master/MFL_depth.svg" width="80%">
+
 
