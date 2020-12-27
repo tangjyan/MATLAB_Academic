@@ -16,7 +16,7 @@ ax = axes(fig);
 
 
 % 设置坐标标签
-x_label="\fontname{宋体}厚度 \fontname{Times New Roman}(mm)";
+x_label="\fontname{宋体}厚度 \fontname{latin modern math}(A/mm)";% latex样式的英文不是times，是latin
 y_label1="$H_x$ (A/m)";
 y_label2="$H^{'}_{x}$ (A/m$\cdot$mm)";
 
@@ -70,7 +70,7 @@ ax.TickDir = 'in';
 
 yyaxis right;
 l2=plot(h(1:end-1),diff(y1));
-l2.LineWidth=llw; 
+l2.LineWidth=llw;
 l2.LineStyle='--';
 
 ax.YLabel.String=y_label2;
@@ -91,7 +91,3 @@ leg.Box = 'on';
 leg.LineWidth= 0.5;
 saveas(fig, 'MFL_depth', 'svg')
 print(fig, 'MFL_depth','-r175','-dpng');
-
-
-
-
