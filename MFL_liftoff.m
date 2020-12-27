@@ -39,7 +39,7 @@ h2=plot(x2,y2);
 la_tex='latex';
 
 % …Ë÷√◊÷ÃÂ
-fig_font="Times new roman"; % Times new roman
+fig_font="cmr10"; % Times new roman
 
 fig.Units = 'centimeters';
 fig.Position(3:4) = [6, 5]; % 7cmx5.25cm
@@ -88,7 +88,7 @@ lgd.Location = 'best';
 lgd.Box = 'off';
 lgd.NumColumns = 1;
 
-saveas(fig, 'MFL_liftoff', 'emf')
+saveas(fig, 'MFL_liftoff', 'svg')
 print(fig, 'MFL_liftoff','-r175','-dpng');
 
 end
