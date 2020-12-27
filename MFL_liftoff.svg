@@ -10,10 +10,10 @@
       /></clipPath
     ></defs
     ><g style="fill:white; stroke:white;"
-    ><rect x="0" y="0" width="454" style="clip-path:url(#clipPath1); stroke:none;" height="378"
+    ><rect x="0" y="0" width="20" style="clip-path:url(#clipPath1); stroke:none;" height="15"
     /></g
     ><g style="fill:white; text-rendering:optimizeSpeed; color-rendering:optimizeSpeed; image-rendering:optimizeSpeed; shape-rendering:crispEdges; stroke:white; color-interpolation:sRGB;"
-    ><rect x="0" width="454" height="378" y="0" style="stroke:none;"
+    ><rect x="0" width="20" height="15" y="0" style="stroke:none;"
       /><path style="stroke:none;" d="M83 301 L431 301 L431 23 L83 23 Z"
     /></g
     ><g style="fill:rgb(38,38,38); text-rendering:geometricPrecision; image-rendering:optimizeQuality; color-rendering:optimizeQuality; stroke-linejoin:round; stroke:rgb(38,38,38); color-interpolation:linearRGB; stroke-width:2;"

@@ -42,7 +42,10 @@ la_tex='latex';
 fig_font="cmr10"; % Times new roman
 
 fig.Units = 'centimeters';
-fig.Position(3:4) = [6, 5]; % 7cmx5.25cm
+fig.Position(3:4) = [6, 5]; % 7cmx5.25cm 第3到第4个参数
+fig.PaperUnits = 'centimeters';
+
+fig.PaperPosition(3:4) = [6, 5]; % 7cmx5.25cm
 fig.Color = [1.0, 1.0, 1.0]; % background color
 
 ax.Units = 'centimeters';
@@ -88,7 +91,7 @@ lgd.Location = 'best';
 lgd.Box = 'off';
 lgd.NumColumns = 1;
 
-saveas(fig, 'MFL_liftoff', 'svg')
-print(fig, 'MFL_liftoff','-r175','-dpng');
+saveas(fig, 'MFL_liftoff', 'emf')
+% print(fig, 'MFL_liftoff','-r300','-dsvg');
 
 end
