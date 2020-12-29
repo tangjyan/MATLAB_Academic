@@ -27,7 +27,7 @@ h=linspace(0,100);
 y1=Hx(x,y,b,h);
 
 fig.Units = 'centimeters';
-fig.Position(3:4) = [6, 5]; % 7cmx5.25cm
+fig.Position(3:4) = [5, 4]; % 7cmx5.25cm
 fig.Color = [1.0, 1.0, 1.0]; % background color
 
 ax.Units = 'centimeters';
@@ -89,5 +89,6 @@ leg.Location = 'east';
 leg.NumColumns= 1;
 leg.Box = 'on';
 leg.LineWidth= 0.5;
-saveas(fig, 'MFL_depth', 'svg')
-print(fig, 'MFL_depth','-r175','-dpng');
+% saveas(fig, 'MFL_depth', 'svg')
+print('MFL_depth','-dsvg');
+print('-clipboard','-dmeta');

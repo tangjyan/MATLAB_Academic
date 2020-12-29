@@ -35,6 +35,7 @@ ax = axes(fig);
 h1=plot(x1,y1);hold on;
 h2=plot(x2,y2);
 
+
 % 设置文字渲染引擎，全英文使用latex，有中文使用tex
 la_tex='latex';
 
@@ -69,7 +70,6 @@ ax.XMinorTick = 'on';   % 次坐标开关
 ax.TickDir = 'out';       % 坐标标签方向
 ax.TickLength(1) = 0.02; % 坐标标签长度
 
-
 set(h1, 'color', 'k','LineStyle','-','linewidth',1.5);
 set(h2,'LineStyle','--','linewidth',1.5);
 
@@ -85,7 +85,7 @@ ax.TickLength = [0.02 0.035];
 
 % lgd('on')
 legend(lgdt);
-lgd=legend(ax);
+lgd = legend(ax);
 lgd.Interpreter = la_tex;
 lgd.Location = 'best';
 lgd.Box = 'off';
