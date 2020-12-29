@@ -27,7 +27,7 @@ h=linspace(0,100);
 y1=Hx(x,y,b,h);
 
 fig.Units = 'centimeters';
-fig.Position(3:4) = [5, 4]; % 7cmx5.25cm
+fig.Position(3:4) = [6, 5]; % 7cmx5.25cm
 fig.Color = [1.0, 1.0, 1.0]; % background color
 
 ax.Units = 'centimeters';
@@ -87,8 +87,9 @@ leg=legend(ax,"$H_x$","$H^{'}_{x}$");
 leg.Interpreter = 'latex';
 leg.Location = 'east';
 leg.NumColumns= 1;
-leg.Box = 'on';
+leg.Box = 'off';
 leg.LineWidth= 0.5;
 % saveas(fig, 'MFL_depth', 'svg')
 print('MFL_depth','-dsvg');
-print('-clipboard','-dmeta');
+% 同时复制到剪贴板中
+print('-clipboard','-dmeta'); 
